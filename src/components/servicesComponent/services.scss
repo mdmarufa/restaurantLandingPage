@@ -1,0 +1,36 @@
+.services {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--defaultAreaGap);
+  justify-content: space-between;
+
+  .left {
+    width: 650px;
+  }
+  .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 420px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  .services {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    
+    .left {
+      width: 100%;
+      margin: 40px 0;
+    }
+
+      .right {
+        grid-template-columns: 1fr 1fr;
+        width: 650px;
+        max-width: 100%;
+        margin: auto;
+    }
+  }
+}

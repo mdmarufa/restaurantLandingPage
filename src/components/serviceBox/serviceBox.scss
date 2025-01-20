@@ -1,0 +1,25 @@
+.serviceBox {
+  width: 200px;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  p {
+    color: var(--defaultColor);
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-block: 20px 5px;
+  }
+
+  span {
+    color: var(--defaultColor);
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  .serviceBox {
+    width: 100%;
+  }
+}

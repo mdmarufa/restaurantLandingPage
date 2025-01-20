@@ -1,0 +1,10 @@
+.FooterLinkSection {
+  width: fit-content;
+}
+
+@media screen and (max-width: 510px) {
+  .FooterLinkSection {
+    text-align: center;
+    margin: auto;
+  }
+}

@@ -1,0 +1,21 @@
+@use "./assets/styles/global/global" as *;
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+}
+
+main {
+  width: 100%;
+  scrollbar-width: none;
+  height: calc(100vh - var(--headerH));
+  overflow: scroll;
+}
+
+@media screen and (max-width: 929px) {
+  main {
+    height: calc(100vh - 80px);
+  }
+}

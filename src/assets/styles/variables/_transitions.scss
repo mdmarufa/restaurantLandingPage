@@ -1,0 +1,3 @@
+@mixin defaultTransition ($e: all, $d: .3s, $t: ease){
+  transition: $e $d $t;
+}

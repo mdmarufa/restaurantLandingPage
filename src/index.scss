@@ -1,0 +1,98 @@
+@use "./assets/styles/global/global" as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+:root {
+  --defaultFs: #{$defaultFs};
+  --defaultIconS: #{$defaultIconS};
+  --defaultColor: #{$primaryColor};
+  --defaultIDS: #{$iconDS};
+  --defaultAreaGap: #{$areaGap};
+  --h1: #{$h1};
+  --p: #{$p};
+  --darkBlack: #{$darkBlack};
+  --black: #{$black};
+  --white: #{$white};
+  --red: #{$red};
+  --itemBg: #{$itemBg};
+  --headerH: #{$headerHeight};
+  --catHe: 1.7rem;
+  --catTi: 1.1rem;
+}
+.shadowx {
+  box-shadow: 0px 0px 36px 0px #00000014;
+}
+.priceSine {
+  font-size: .8rem;
+  color: var(--red)
+}
+
+.natofont {
+  font-family: "Noto Color Emoji", serif;
+}
+
+.colorize {
+  color: $primaryColor;
+}
+
+.vsp {
+  padding: 10px;
+}
+
+.popUpText {
+  background-color: $white;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  color: $red;
+}
+
+.catagoryHeader {
+  font-size: var(--catHe);
+  color: (--black);
+  font-weight: 600;
+}
+
+.catagoryTitle {
+  font-size: var(--catTi);
+  font-weight: 500;
+}
+
+
+
+@media screen and (max-width: 1199px) {
+  :root {
+  --defaultAreaGap: 20px;
+  }
+}
+@media screen and (max-width: 959px) {
+  :root {
+    --h1: 3rem;
+    --p: 1rem;
+  }
+}
+@media screen and (max-width: 510px) {
+  :root {
+    --h1: 1.8rem;
+    --p: 1rem;
+  }
+
+  .catagoryHeader {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .catagoryTitle {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

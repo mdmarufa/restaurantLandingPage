@@ -1,0 +1,13 @@
+.p {
+  font-size: var(--p);
+  color: var(--black);
+}
+
+.red {
+  color: var(--red)
+}
+
+.hu:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

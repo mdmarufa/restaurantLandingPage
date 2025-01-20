@@ -1,0 +1,31 @@
+@use "../../assets/styles/global/global" as *;
+
+.iconDish {
+  width: var(--defaultIDS);
+  height: var(--defaultIDS);
+  background-color: rgba($black, 0.1);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  @include defaultTransition;
+
+
+  &:hover {
+    background-color: var(--defaultColor);
+  }
+  &:hover > svg > path {
+    fill: $white;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    
+    path {
+      fill: $black;
+      @include defaultTransition;
+    }
+  }
+}

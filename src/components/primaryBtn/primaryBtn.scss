@@ -1,0 +1,58 @@
+@use "../../assets/styles/global/global" as *;
+@use "sass:color";
+
+.primaryBtn {
+  user-select: none;
+  background-color: $primaryColor;
+  padding: 15px 30px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  border-radius: 40px;
+  cursor: pointer;
+  @include defaultTransition;
+
+  &:hover {
+    background-color: color.adjust($primaryColor, $lightness: -7%);
+  }
+  &:active {
+    background-color: color.adjust($primaryColor, $lightness: -14%);
+  }
+
+  .icon {
+    margin-right: 10px;
+
+    svg {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  span:hover {
+    color: white;
+  }
+}
+
+.shodowColorize {
+  box-shadow: 0px 10px 30px 0px rgba($primaryColor, 0.5);
+}
+
+@media screen and (max-width: 800px) {
+  .primaryBtn {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .primaryBtn {
+    .textLink {
+      font-size: 1rem;
+    }
+
+    .icon {
+      svg {
+        width: 20px;
+      }
+    }
+  }
+}

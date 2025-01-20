@@ -1,0 +1,11 @@
+.h {
+  font-size: var(--h1);
+  color: var(--darkBlack);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 510px) {
+  .h {
+    font-weight: 700;
+  }
+}
