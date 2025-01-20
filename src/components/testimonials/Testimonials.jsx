@@ -38,9 +38,9 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="right">
-        <P color={true} title="Textimonials" />
+        <P color={true} title="Testimonials" />
         <H title={"What Our Customers Say About Us"} />
-        <P title="“I had the pleasure of dining at Foodi last night, and I'm still raving about the experience! The attention to detail in presentation and service was impeccable”" />
+        <P title="“I enjoyed dining at Foodi last night, and I'm still raving about the experience! The attention to detail in presentation and service was impeccable”" />
 
         <div className="customerFidb">
           <div className="profileImgs">
