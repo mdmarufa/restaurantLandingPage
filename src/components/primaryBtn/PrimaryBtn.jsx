@@ -1,4 +1,4 @@
-import CallIcon from '../../assets/svg/callicon.svg?react';
+import CallIcon from '../../assets/svg/callIcon.svg?react';
 import TextLink from '../textLink/TextLink';
 
 import "./primaryBtn.scss";
