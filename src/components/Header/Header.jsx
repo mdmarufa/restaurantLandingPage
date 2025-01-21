@@ -24,8 +24,8 @@ const Header = ({ref}) => {
       <BrandLogo />
       <div className={`links ${dataContext.data.isLinkActive ? "active" : ""}`}>
         <TextLink title="Home" />
-        <TextLink title="Menu" arrowMode={true} childLinks={["Menu Sub link here", "Menu Sub link here", "Menu Sub link here", "Menu Sub link here", "Menu Sub link here", "Menu Sub link here", "Menu Sub link here"]} />
-        <TextLink title="Services" arrowMode={true} childLinks={["Sevices Sub link here", "Sevices Sub link here", "Sevices Sub link here"]} />
+        <TextLink title="Menu" arrowMode={true} />
+        <TextLink title="Services" arrowMode={true} />
         <TextLink title="Offers" />
         <div className="btnTexts text-center">
           <TextLink title="Search" />
