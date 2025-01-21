@@ -33,6 +33,9 @@ function App() {
         headerRef,
         setMainWindHeight
       );
+    } else {
+      setMainWindHeight({})
+      setStyles({})
     }
   };
 
