@@ -10,7 +10,7 @@ import SearchIcon from "../../assets/svg/searchIconsvg.svg?react";
 import SopingBagIcon from "../../assets/svg/shopingBagIcon.svg?react";
 import "./header.scss";
 
-const Header = ({ref}) => {
+const Header = ({ ref }) => {
   const dataContext = use(DataContext);
   const { scrollHeight, currentScroll, offsetHeight } = dataContext.data;
   const toggleLinksMode = dataContext.data.isLinkActive ? (
@@ -19,10 +19,19 @@ const Header = ({ref}) => {
     <FaBarsStaggered />
   );
 
+  const handleClick = (e, isLinkActive) => {
+    dataContext.updateData({
+      ...dataContext.data,
+      isLinkActive: isLinkActive,
+      bcx: e.clientX,
+      bcy: e.clientY,
+    });
+  };
+
   return (
     <header ref={ref}>
       <BrandLogo />
-      <div className={`links ${dataContext.data.isLinkActive ? "active" : ""}`}>
+      <div className={`links ${dataContext.data.isLinkActive ? "active" : ""}`} onClick={(e) => handleClick(e, true)} >
         <TextLink title="Home" />
         <TextLink title="Menu" arrowMode={true} />
         <TextLink title="Services" arrowMode={true} />
@@ -40,14 +49,7 @@ const Header = ({ref}) => {
         </div>
         <div
           className="toggleLinks"
-          onClick={(e) => {
-            dataContext.updateData({
-              ...dataContext.data,
-              isLinkActive: !dataContext.data.isLinkActive,
-              bcx: e.clientX,
-              bcy: e.clientY,
-            });
-          }}
+          onClick={(e) => handleClick(e, !dataContext.data.isLinkActive)}
         >
           <Icon icon={toggleLinksMode} />
         </div>

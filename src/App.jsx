@@ -21,7 +21,7 @@ function App() {
   const [mainWindHeight, setMainWindHeight] = useState({});
 
   const dataContext = use(DataContext);
-  document.onclick = (e) => handleDocClick(e, dataContext);
+  document.onclick = ((e) => handleDocClick(e, dataContext));
 
   const handleAutoRes = () => {
     const appMaxWidth = 1440; //px
